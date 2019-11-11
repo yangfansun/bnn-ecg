@@ -123,26 +123,6 @@ def augmentation(inputs, load_size=720, is_training=True):
     return inputs
 
 
-# def get_variables_with_name(name, s_num=0, delete=None):
-# 	# get network parameters with it's name
-#
-# 	out_vars = []
-# 	file = 'structure_' + str(s_num)
-# 	in_vars = tf.trainable_variables()
-# 	d_vars = [var for var in in_vars if file in var.name]
-# 	for temp in range(len(name)):
-# 		for var in d_vars:
-# 			if name[temp] in var.name:
-# 				if delete:
-# 					if delete in var.name:
-# 						continue
-# 				out_vars.append(var)
-# 	for idx, v in enumerate(out_vars):
-# 		print("  got {:3}: {:15}   {}".format(idx, v.name, str(v.get_shape())))
-#
-# 	return out_vars
-
-
 def loss_calculate(outputs, labels, regularization, is_train=False, use_l2=True, clip=True, name=None):
     # calculate loss and accuracy
 
@@ -248,14 +228,12 @@ def get_op_dist(outputs, labels, outputs_prior, regularization, learning_rate, t
 
 
 def generate_op(*args):
-    pass
     return [args[i] for i in range(len(args))]
 
 
 def category_accuracy(logits, labels):
     acc = []
     for type_num in range(4):
-        # logits = np.argmax(outputs, 1)
         index_label = np.where(labels == type_num)
         global_amount = np.shape(index_label)[1]
         temp = np.equal(logits[index_label], type_num)
