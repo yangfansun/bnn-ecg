@@ -14,8 +14,6 @@ import logging
 from gradients_statistic import get_gradients
 from get_variables import get_variables_with_name
 
-# import train_latest
-
 TOTAL_NUM = 8528
 SAMPLE_NUM = 8228
 SEQUENCE_LENGTH = [6000, 9100, 12000, 16000, 18300]
