@@ -8,7 +8,6 @@ import os
 import tensorflow as tf
 import tensorlayer as tl
 import numpy as np
-import net_res
 import net_simple
 import net_binary
 import logging
