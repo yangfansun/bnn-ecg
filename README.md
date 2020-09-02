@@ -1,6 +1,6 @@
 # *ECG Signal Classification with Binarized Convolutional Neural Network* source code
 
-This code is the source code of our paper. Please refer to the paper for the specific parameters.
+This code is the source code of our [paper](https://www.sciencedirect.com/science/article/abs/pii/S0010482520301682). Please refer to the paper for the specific parameters.
 
 ### Dataset
 
